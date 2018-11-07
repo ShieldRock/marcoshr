@@ -1,0 +1,62 @@
+/** Bootstrap Dark Modal Styles **/
+.modal .modal-dialog .modal-content {
+    border-radius: 0.75rem !important;
+}
+
+.modal-open .modal, .btn:focus {
+    outline: none !important;
+}
+
+.modal.dark .modal-dialog .modal-content .modal-header {
+    background: #343A40;
+    border-bottom: 1px solid #2A2C2E;
+    border-top-left-radius: 11px !important;
+    border-top-right-radius: 11px !important;
+    -webkit-border-top-left-radius: 11px !important;
+    -webkit-border-top-right-radius: 11px !important;
+    color: #FFF;
+}
+
+.modal.dark .modal-dialog .modal-content .modal-body {
+    background: #343A40;
+    color: #FFF;
+}
+
+.modal.dark .modal-dialog .modal-content .modal-footer {
+    background: #343A40;
+    border-top: 1px solid #2A2C2E;
+    border-bottom-left-radius: 11px !important;
+    border-bottom-right-radius: 11px !important;
+    -webkit-border-bottom-left-radius: 11px !important;
+    -webkit-border-bottom-right-radius: 11px !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #FFF;
+}
+
+.absolute-center {
+    /* Internet Explorer 10 */
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+
+    /* Firefox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Safari, Opera and Chrome */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    /* W3C */
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+.modal-result-body {
+    height: 150px;
+}

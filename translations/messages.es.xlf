@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="marcos-web.title">
+                <source>marcos-web.title</source>
+                <target>MARCOS HERNÁNDEZ ROJO</target>
+            </trans-unit>
+            <trans-unit id="toggle-navigation">
+                <source>toggle-navigation</source>
+                <target>Conmutar Navegación</target>
+            </trans-unit>
+            <trans-unit id="home-upper">
+                <source>home-upper</source>
+                <target>INICIO</target>
+            </trans-unit>
+            <trans-unit id="home-lower">
+                <source>home-lower</source>
+                <target>Inicio</target>
+            </trans-unit>
+            <trans-unit id="news">
+                <source>news</source>
+                <target>NOTICIAS</target>
+            </trans-unit>
+            <trans-unit id="contact">
+                <source>contact</source>
+                <target>CONTACTO</target>
+            </trans-unit>
+            <trans-unit id="facebook">
+                <source>facebook</source>
+                <target>Facebook</target>
+            </trans-unit>
+            <trans-unit id="twitter">
+                <source>twitter</source>
+                <target>Twitter</target>
+            </trans-unit>
+            <trans-unit id="instagram">
+                <source>instagram</source>
+                <target>Instagram</target>
+            </trans-unit>
+            <trans-unit id="google-plus">
+                <source>google-plus</source>
+                <target>Google+</target>
+            </trans-unit>
+            <trans-unit id="calltome">
+                <source>calltome</source>
+                <target>Llámame</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>email</source>
+                <target>Correo Electrónico</target>
+            </trans-unit>
+            <trans-unit id="info">
+                <source>info</source>
+                <target>Información</target>
+            </trans-unit>
+            <trans-unit id="quick-links">
+                <source>quick-links</source>
+                <target>Enlaces Rápidos</target>
+            </trans-unit>
+            <trans-unit id="about">
+                <source>about</source>
+                <target>Acerca de</target>
+            </trans-unit>
+            <trans-unit id="faq">
+                <source>faq</source>
+                <target>FAQ</target>
+            </trans-unit>
+            <trans-unit id="goto">
+                <source>goto</source>
+                <target>Ir a</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>send</source>
+                <target>Enviar</target>
+            </trans-unit>
+            <trans-unit id="copyright">
+                <source>copyright</source>
+                <target>Todos los derechos reservados.</target>
+            </trans-unit>
+            <trans-unit id="read-more">
+                <source>read-more</source>
+                <target>Leer más...</target>
+            </trans-unit>
+            <trans-unit id="close">
+                <source>close</source>
+                <target>Cerrar</target>
+            </trans-unit>
+            <trans-unit id="mail-upper">
+                <source>mail-upper</source>
+                <target>Correo Electrónico</target>
+            </trans-unit>
+            <trans-unit id="mail-lower">
+                <source>mail-lower</source>
+                <target>correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="firstname-upper">
+                <source>firstname-upper</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="firstname-lower">
+                <source>firstname-lower</source>
+                <target>nombre</target>
+            </trans-unit>
+            <trans-unit id="lastname-upper">
+                <source>lastname-upper</source>
+                <target>Primer Apellido</target>
+            </trans-unit>
+            <trans-unit id="lastname-lower">
+                <source>lastname-lower</source>
+                <target>primer apellido</target>
+            </trans-unit>
+            <trans-unit id="subject">
+                <source>subject</source>
+                <target>Asunto</target>
+            </trans-unit>
+            <trans-unit id="doubt">
+                <source>doubt</source>
+                <target>Duda</target>
+            </trans-unit>
+            <trans-unit id="other">
+                <source>other</source>
+                <target>Otro</target>
+            </trans-unit>
+            <trans-unit id="message">
+                <source>message</source>
+                <target>Mensaje</target>
+            </trans-unit>
+            <trans-unit id="write-message">
+                <source>write-message</source>
+                <target>mensaje...</target>
+            </trans-unit>
+            <trans-unit id="message-max-length">
+                <source>message-max-length</source>
+                <target>El número de caracteres máximo permitido es de 2000 caracteres.</target>
+            </trans-unit>
+            <trans-unit id="please-enter-your">
+                <source>please-enter-your</source>
+                <target>Por favor introduzca su </target>
+            </trans-unit>
+            <trans-unit id="is-required">
+                <source>is-required</source>
+                <target> es obligatorio.</target>
+            </trans-unit>
+            <trans-unit id="valid">
+                <source>valid</source>
+                <target>Válido </target>
+            </trans-unit>
+            <trans-unit id="please-select-an-option">
+                <source>please-select-an-option</source>
+                <target>Por favor seleccione una opción</target>
+            </trans-unit>
+            <trans-unit id="fields-required">
+                <source>fields-required</source>
+                <target>Campos obligatorios</target>
+            </trans-unit>
+            <trans-unit id="send-successfully-title">
+                <source>send-successfully-title</source>
+                <target>Enhorabuena</target>
+            </trans-unit>
+            <trans-unit id="send-successfully-body">
+                <source>send-successfully-body</source>
+                <target>El correo electrónico se ha enviado satisfactoriamente.</target>
+            </trans-unit>
+            <trans-unit id="send-error-title">
+                <source>send-error-title</source>
+                <target>Error</target>
+            </trans-unit>
+            <trans-unit id="send-error-body">
+                <source>send-error-body</source>
+                <target>El correo electrónico no se ha enviado. Por favor, inténtelo más tarde o contacte con el administrador.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

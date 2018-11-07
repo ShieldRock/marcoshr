@@ -1,0 +1,101 @@
+{# templates/news/email.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form id="contact-form" method="post" action="emailSender" role="form">
+        <div class="container col-xs-12 col-sm-12 col-md-10 col-lg-6">
+            <div id="messages" class="messages"></div>
+
+            <div class="controls" style="font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>{{ 'mail-upper'|trans }}</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstname">{{ 'firstname-upper'|trans }}&nbsp;*</label>
+                            <input id="firstname" type="text" name="firstname" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'firstname-lower'|trans }}" required="required" data-error="{{ 'firstname-upper'|trans }}{{ 'is-required'|trans }}">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastname">{{ 'lastname-upper'|trans }}&nbsp;*</label>
+                            <input id="lastname" type="text" name="lastname" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'lastname-lower'|trans }}" required="required" data-error="{{ 'lastname-upper'|trans }}{{ 'is-required'|trans }}">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">{{ 'mail-upper'|trans }}&nbsp;*</label>
+                            <input id="email" type="email" name="email" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'mail-lower'|trans }}" required="required" data-error="{{ 'valid'|trans }}{{ 'mail-lower'|trans }}{{ 'is-required'|trans }}">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subject">{{ 'please-select-an-option'|trans }}&nbsp;*</label>
+                            <select id="subject" name="subject" class="form-control" required="required" data-error="{{ 'please-select-an-option'|trans }}">
+                                <option value="-1"></option>
+                                <option value="0">{{ 'info'|trans }}</option>
+                                <option value="1">{{ 'email'|trans }}</option>
+                                <option value="2">{{ 'other'|trans }}</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="message">{{ 'message'|trans }}&nbsp;*</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'write-message'|trans }}" rows="4" maxlength="2000" required="required" data-error="{{ 'message'|trans }}{{ 'is-required'|trans }}"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted">
+                            <strong>*</strong>&nbsp;{{ 'fields-required'|trans }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2" style="float: right; margin-bottom: 15px;">
+                        <input id="btnSender" type="button" class="btn btn-secondary" value="{{ 'send'|trans }}&nbsp;{{ 'message'|trans }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% include 'modals/modalResult.html.twig' %}
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="{{ asset('build/js/summernote/summernote-bs4.css') }}" />
+    <script type="text/javascript" src="{{ asset('build/js/summernote/summernote-bs4.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/js/summernote/lang/summernote-es-ES.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/js/email.js') }}"></script>
+    <script type="text/javascript">
+        var action = '{{ url('email/emailSender') }}';
+
+        $(document).ready(function() {
+            $('#message').summernote({
+                // default: 'en-US'
+                lang: 'es-ES'
+            });
+        });
+    </script>
+{% endblock %}

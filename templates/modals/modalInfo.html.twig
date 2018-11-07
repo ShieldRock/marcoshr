@@ -1,0 +1,41 @@
+{# templates/modals/modalInfo.html.twig #}
+<div id="modalInfo" class="modal hide fade dark" tabindex="-1" role="dialog" aria-labelledby="modalInfo" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: transparent;">
+            <div class="modal-header">
+                <h5 id="modalInfoTitle" class="modal-title"><i class="fas fa-address-card"></i>&nbsp;{{ 'info'|trans }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{ 'close'|trans }}" style="outline: none;">
+                    <span aria-hidden="true" style="color: white;">
+                        <i class="far fa-times-circle"></i>
+                    </span>
+                </button>
+            </div>
+            <div id="modalInfoBody" class="modal-body">
+                <p><b>Marcos Hernández Rojo</b></p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +34 666 77 88 99
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +34 980 00 00 00
+                </p>
+                <p>
+                    <i class="fas fa-mobile-alt"></i>
+                    +34 666 77 88 99
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +34 666 77 88 99
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    C./ Probando la calle
+                </p>
+            </div>
+            <div id="modalInfoFooter" class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" title="{{ 'close'|trans }}">{{ 'close'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</div>

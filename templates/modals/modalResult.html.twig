@@ -1,0 +1,32 @@
+{# templates/modals/modalResult.html.twig #}
+<div id="modalResult" class="modal hide fade dark" tabindex="-1" role="dialog" aria-labelledby="modalResult" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: transparent;">
+            <div class="modal-header">
+                <h5 id="modalResultTitle" class="modal-title"><span id="messageTitleIcon" aria-hidden="true"></span>&nbsp;<span id="messageTitle" aria-hidden="true"></span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{ 'close'|trans }}" style="outline: none;">
+                    <span aria-hidden="true" style="color: white;">
+                        <i class="far fa-times-circle"></i>
+                    </span>
+                </button>
+            </div>
+            <div id="modalResultBody" class="modal-body absolute-center modal-result-body">
+                <span id="messageBodyIcon" aria-hidden="true"></span>&nbsp;&nbsp;<span><span id="messageBody" aria-hidden="true"></span></span>
+            </div>
+            <div id="modalResultFooter" class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" title="{{ 'close'|trans }}">{{ 'close'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript">
+    var messageSuccessTitle = '{{ "send-successfully-title"|trans }}';
+    var messageSuccessBody = '{{ "send-successfully-body"|trans }}';
+    var messageSuccessIcon = '<i class="fas fa-check-circle" style="color: forestgreen;"></i>';
+    var messageSuccessIconLarge = '<i class="fas fa-check-circle fa-2x" style="color: forestgreen;"></i>';
+    var messageErrorTitle = '{{ "send-error-title"|trans }}';
+    var messageErrorBody = '{{ "send-error-body"|trans }}';
+    var messageErrorIcon = '<i class="fas fa-exclamation-circle" style="color: red;"></i>';
+    var messageErrorIconLarge = '<i class="fas fa-exclamation-circle fa-2x" style="color: red;"></i>';
+</script>

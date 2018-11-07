@@ -1,0 +1,26 @@
+{# templates/news/news-template.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for i in 1..10 %}
+        <div class="">
+            <div style="width: 50%; height: 200px; background-color: #FFF; border: #693629 solid 5px; border-radius: 25px; -webkit-box-shadow: 10px 10px 15px 0 rgba(0,0.5,0.5,0.5); -moz-box-shadow: 10px 10px 15px 0 rgba(0,0.5,0.5,0.5); box-shadow: 10px 10px 15px 0 rgba(0,0.5,0.5,0.5);">
+                <div id="divNewsTitle_{{ newsTemplate.Index }}" style="width: 100%; height: 20%; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                    <h1 style="margin: 0; text-align: center;">{{ newsTemplate.Title }}{{ i }}</h1>
+                </div>
+                <div id="divNewsBody_{{ newsTemplate.Index }}" style="width: 100%; height: 70%; background-color: #FFF;">
+                    <div style="width: 30%; height: 100%; float: left; display: flex; align-items: center; justify-content: center;">
+                        <img src="{{ asset('build/images/img/entrance.png') }}" style="height: 80%; width: 80%;" /><!-- newsTemplate.PreviewImage -->
+                    </div>
+                    <div style="width: 70%; height: 100%; float: left; border-bottom-right-radius: 25px;">
+                        <div style="margin: 35px 30px; text-align: justify; text-justify: inter-word;">
+                            <p>{{ newsTemplate.PreviewText }}</p>
+                            <a href="{{ newsTemplate.Url }}" style="float: right;">{{ 'read-more'|trans }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

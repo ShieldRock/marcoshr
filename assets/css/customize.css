@@ -1,0 +1,38 @@
+.navbar-brand > img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+
+.custom-dropdown-item {
+    color: #FFF;
+}
+
+.custom-dropdown-item:hover {
+    color: #343A40 !important;
+}
+
+.custom-dropdown-item > a:active {
+    color: #FFF;
+    background-color: #343A40;
+}
+
+p > .copyright {
+    color: #FFF;
+}
+
+.awesome-dark-background {
+    background-color: rgba(154, 157, 160, 1.0);
+}
+
+.awesome-dark {
+    color: rgba(154, 157, 160, 1.0);
+}
+
+.awesome-dark:hover {
+    color: rgba(204, 206, 207, 1.0);
+}
+
+.awesome-dark:active {
+    color: #FFF;
+}

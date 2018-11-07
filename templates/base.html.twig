@@ -1,0 +1,33 @@
+{# templates/base.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ 'marcos-web.title'|trans }}</title>
+        <link rel="shortcut icon" href="{{ asset('build/images/icon/favicon.ico') }}">
+        <link rel="icon" href="{{ asset('build/images/icon/favicon.ico') }}">
+        <script type="text/javascript" src="{{ asset('build/js/app.js') }}"></script>
+        <link type="text/css" rel="stylesheet" href="{{ asset('build/css/app.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('build/css/custom-modal-theme.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('build/css/customize.css') }}" />
+        {% block head %}{% endblock %}
+    </head>
+    <body class="awesome-dark-background">
+        <!-- HEADER -->
+        {% include 'header.html.twig' %}
+
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+
+        <!-- FOOTER -->
+        {% include 'footer.html.twig' %}
+
+        <!-- MODAL -->
+        {% include 'modals/modalInfo.html.twig' %}
+
+        {% block footer %}
+            <script type="text/javascript" src="{{ asset('build/js/common.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
