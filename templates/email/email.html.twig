@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="subject">{{ 'please-select-an-option'|trans }}&nbsp;*</label>
+                            <label for="subject">{{ 'subject'|trans }}&nbsp;*</label>
                             <select id="subject" name="subject" class="form-control" required="required" data-error="{{ 'please-select-an-option'|trans }}">
                                 <option value="-1"></option>
                                 <option value="0">{{ 'info'|trans }}</option>
@@ -56,7 +56,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="message">{{ 'message'|trans }}&nbsp;*</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'write-message'|trans }}" rows="4" maxlength="2000" required="required" data-error="{{ 'message'|trans }}{{ 'is-required'|trans }}"></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="{{ 'please-enter-your'|trans }}{{ 'write-message'|trans }}" rows="10" maxlength="2000" required="required" data-error="{{ 'message'|trans }}{{ 'is-required'|trans }}"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -94,7 +94,8 @@
         $(document).ready(function() {
             $('#message').summernote({
                 // default: 'en-US'
-                lang: 'es-ES'
+                lang: 'es-ES',
+                height: 300
             });
         });
     </script>

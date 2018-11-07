@@ -11,7 +11,12 @@
                 </button>
             </div>
             <div id="modalResultBody" class="modal-body absolute-center modal-result-body">
-                <span id="messageBodyIcon" aria-hidden="true"></span>&nbsp;&nbsp;<span><span id="messageBody" aria-hidden="true"></span></span>
+                <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    <span id="messageBodyIcon" aria-hidden="true"></span>
+                </div>
+                <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                    <span id="messageBody" aria-hidden="true"></span>
+                </div>
             </div>
             <div id="modalResultFooter" class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" title="{{ 'close'|trans }}">{{ 'close'|trans }}</button>
@@ -26,7 +31,7 @@
     var messageSuccessIcon = '<i class="fas fa-check-circle" style="color: forestgreen;"></i>';
     var messageSuccessIconLarge = '<i class="fas fa-check-circle fa-2x" style="color: forestgreen;"></i>';
     var messageErrorTitle = '{{ "send-error-title"|trans }}';
-    var messageErrorBody = '{{ "send-error-body"|trans }}';
+    var messageErrorBody = '{{ "send-error-body"|nl2br|trans }}';
     var messageErrorIcon = '<i class="fas fa-exclamation-circle" style="color: red;"></i>';
     var messageErrorIconLarge = '<i class="fas fa-exclamation-circle fa-2x" style="color: red;"></i>';
 </script>

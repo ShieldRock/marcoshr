@@ -168,7 +168,7 @@
             </trans-unit>
             <trans-unit id="send-error-body">
                 <source>send-error-body</source>
-                <target>El correo electrónico no se ha enviado. Por favor, inténtelo más tarde o contacte con el administrador.</target>
+                <target>El correo electrónico no se ha enviado.\nPor favor, inténtelo más tarde o contacte con el administrador.</target>
             </trans-unit>
         </body>
     </file>
