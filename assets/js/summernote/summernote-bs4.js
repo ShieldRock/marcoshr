@@ -3658,6 +3658,7 @@ var Table = /** @class */ (function () {
      * @return {Node}
      */
     Table.prototype.createTable = function (colCount, rowCount, options) {
+        debugger;
         var tds = [];
         var tdHTML;
         for (var idxCol = 0; idxCol < colCount; idxCol++) {
@@ -5378,6 +5379,7 @@ var Buttons = /** @class */ (function () {
             ]).render();
         });
         this.context.memo('button.table', function () {
+            debugger;
             return _this.ui.buttonGroup([
                 _this.button({
                     className: 'dropdown-toggle',

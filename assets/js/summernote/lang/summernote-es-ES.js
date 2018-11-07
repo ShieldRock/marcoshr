@@ -37,18 +37,18 @@
       },
       video: {
         video: 'Vídeo',
-        videoLink: 'Link del vídeo',
+        videoLink: 'Enlace del vídeo',
         insert: 'Insertar vídeo',
         url: '¿URL del vídeo?',
         providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion o Youku)'
       },
       link: {
-        link: 'Link',
-        insert: 'Insertar link',
-        unlink: 'Quitar link',
+        link: 'Enlace',
+        insert: 'Insertar enlace',
+        unlink: 'Quitar enlace',
         edit: 'Editar',
         textToDisplay: 'Texto para mostrar',
-        url: '¿Hacia que URL lleva el link?',
+        url: '¿Hacia qué URL lleva el enlace?',
         openInNewWindow: 'Abrir en una nueva ventana'
       },
       table: {
@@ -100,7 +100,7 @@
         background: 'Color de fondo',
         foreground: 'Color de fuente',
         transparent: 'Transparente',
-        setTransparent: 'Establecer transparente',
+        setTransparent: 'Establecer transparencia',
         reset: 'Restaurar',
         resetToDefault: 'Restaurar por defecto'
       },
@@ -148,7 +148,7 @@
       },
       specialChar: {
         specialChar: 'CARACTERES ESPECIALES',
-        select: 'Selecciona Caracteres especiales'
+        select: 'Selecciona caracteres especiales'
       }
     }
   });
