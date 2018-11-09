@@ -6,6 +6,7 @@ use App\Model\News;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class NewsController extends AbstractController {
     /**
@@ -20,6 +21,7 @@ class NewsController extends AbstractController {
 
         return $this->render('news/news-template.html.twig', [
             'newsTemplate' => $newsTemplate,
+            'postIts' => $this->get('session')->get('postIts'),
         ]);
     }
 }

@@ -12,25 +12,14 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-class EmailController extends AbstractController {
+class UtilsController extends AbstractController {
     /**
-     * Function to return email view
-     * @throws \Exception
-     * @Route("/email", name="email")
-     */
-    public function emailView() {
-        return $this->render('email/email.html.twig', array(
-            'postIts' => $this->get('session')->get('postIts'),
-        ));
-    }
-
-    /**
-     * @Route("/email/emailSender", name="email/emailSender")
+     * @Route("/config/postit", name="config/postit")
      * @Method({"Post"})
      * @param Request $request
      * @return JsonResponse
      */
-    public function emailSender(Request $request) {
+    public function configPostit(Request $request) {
         if ($request->isXmlHttpRequest()) {
             $encoders = array(new JsonEncoder());
             $normalizers = array(new ObjectNormalizer());
@@ -38,14 +27,20 @@ class EmailController extends AbstractController {
 
             //$em = $this->getDoctrine()->getManager();
             //$posts = $em->getRepository('AppBundle:Post')->findAll();
-            $sendResult = false;
+
+            $result = array(
+                "postit-news" => true,
+                "postit-twitter" => true,
+            );
+
+            $result[$request->get("postItName")] = filter_var($request->get("isVisible"), FILTER_VALIDATE_BOOLEAN);
+            $this->get('session')->set('postIts', $result);
 
             $response = new JsonResponse();
             $response->setStatusCode(200);
             $response->setData(array(
                 'response' => 'success',
-                'result' => $serializer->serialize($sendResult, 'json'),
-                'postIts' => $this->get('session')->get('postIts'),
+                'result' => $serializer->serialize($result, 'json'),
             ));
 
             return $response;

@@ -9,3 +9,22 @@ $(document).ready(function() {
     $('#currentYear').text(new Date().getFullYear());
     $('.dropdown-item').draggable = false;
 });
+
+(function ($) {
+    function closePostit() {
+        var pData = {
+            postItName: 'postit-news',
+            isVisible: false
+        };
+
+        var executeFunction = function(result) {
+            if (!result[pData.postItName]) {
+                $('#postit-news').fadeOut(1000);
+            }
+        };
+
+        sendPostAjax(action, pData, executeFunction);
+    }
+
+    window.closePostit = closePostit;
+})(jQuery);
