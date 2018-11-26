@@ -41,7 +41,41 @@
         });
     }
 
+    function setActiveMenuItem() {
+        var url = window.location.href;
+/*
+        $('ul.navbar-nav li').each(function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            }
+        });
+
+        $('ul.dropdown-menu li').each(function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            }
+        });
+
+        $('ul.navbar-nav li a').each(function() {
+            if (url === this.href) {
+                if ($(this).hasClass('dropdown-item')) {
+                    $('ul.dropdown-menu li a').each(function() {
+                        console.log('url: ' + url);
+                        console.log('dropdown-url: ' + this.href);
+                        debugger;
+                        if (this.href === url) {
+                            //$(this).parent().addClass('active');
+                        }
+                    });
+                } else {
+                    $(this).parent().addClass('active');
+                }
+            }
+        });*/
+    }
+
     // Register global functions por the application
     window.validateJson = validateJson;
     window.sendPostAjax = sendPostAjax;
+    window.setActiveMenuItem = setActiveMenuItem;
 })(jQuery);

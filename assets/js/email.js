@@ -2,7 +2,9 @@ require('bootstrap');
 
 $(document).ready(function() {
     $('#btnSender').click(function() {
-        sendEmail();
+        //if ($('#contact-form').validate()) {
+            sendEmail();
+        //}
     });
 });
 

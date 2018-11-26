@@ -8,9 +8,16 @@ require('@fortawesome/fontawesome-free/js/all.js');
 $(document).ready(function() {
     $('#currentYear').text(new Date().getFullYear());
     $('.dropdown-item').draggable = false;
+
+    setActiveMenuItem();
+
+    $('#navbarDropdown').click(function(event) {
+        event.preventDefault();
+        $('#dropdownMenu').collapse('toggle');
+    });
 });
 
-(function ($) {
+(function($) {
     function closePostit() {
         var pData = {
             postItName: 'postit-news',

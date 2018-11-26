@@ -1,74 +1,58 @@
 {# templates/header.html.twig #}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">
-        <img src="{{ asset('build/images/img/mhr-letters.png') }}" class="custom-brand-image" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="nav-header">
+            <a class="navbar-brand" href="/"><img src="{{ asset('build/images/img/mhr-letters.png') }}" class="d-inline-block align-top" style="width: 80px !important; padding: 0 !important;" alt="" /></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">{{ 'home-upper'|trans }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/news">{{ 'news'|trans }}</a>
-            </li>
-            <li class="nav-item dropdown social">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'contact'|trans }}</a>
-                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item custom-dropdown-item" href="https://www.facebook.com/marcoshernandezrojo" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'facebook'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fab fa-facebook"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'facebook'|trans }}</span>
-                    </a>
-                    <a class="dropdown-item custom-dropdown-item" href="http://twitter.com/AboMarcosHrojo" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'twitter'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fab fa-twitter"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'twitter'|trans }}</span>
-                    </a>
-                    <a class="dropdown-item custom-dropdown-item" href="/" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'instagram'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fab fa-instagram"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'instagram'|trans }}</span>
-                    </a>
-                    <a class="dropdown-item custom-dropdown-item" href="/" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'google-plus'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fab fa-google-plus"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'google-plus'|trans }}</span>
-                    </a>
-
-                    <div class="dropdown-divider"></div>
-
-                    <a class="dropdown-item custom-dropdown-item" href="/email" title="{{ 'send'|trans }}&nbsp;{{ 'email'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'email'|trans }}</span>
-                    </a>
-                    <a class="dropdown-item custom-dropdown-item" href="tel:5555555555" title="{{ 'calltome'|trans }}">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fas fa-phone"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'calltome'|trans }}</span>
-                    </a>
-                    <a id="information" class="dropdown-item custom-dropdown-item" href="#" title="{{ 'info'|trans }}" data-toggle="modal" data-target="#modalInfo">
-                        <span class="col-xs-1 col-sm-1 col-md-1">
-                            <i class="fas fa-info-circle"></i>
-                        </span>
-                        <span class="col-xs-11 col-sm-11 col-md-11">{{ 'info'|trans }}</span>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <!--<form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit">Search</button>
-        </form>-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/">{{ 'home-upper'|trans }}&nbsp;<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/news">{{ 'news'|trans }}</a></li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'contact'|trans }}</a>
+                    <div id="dropdownMenu" class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item custom-dropdown-item" href="https://www.facebook.com/marcoshernandezrojo" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'facebook'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fab fa-facebook"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'facebook'|trans }}</span>
+                        </a>
+                        <a class="dropdown-item custom-dropdown-item" href="https://twitter.com/AboMarcosHrojo" target="_blank" title="{{ 'goto'|trans }}&nbsp;{{ 'twitter'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fab fa-twitter"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'twitter'|trans }}</span>
+                        </a>
+                        <a class="dropdown-item custom-dropdown-item" href="javascript:void(0);" title="{{ 'goto'|trans }}&nbsp;{{ 'instagram'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fab fa-instagram"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'instagram'|trans }}</span>
+                        </a>
+                        <a class="dropdown-item custom-dropdown-item" href="javascript:void(0);" title="{{ 'goto'|trans }}&nbsp;{{ 'google-plus'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fab fa-google-plus"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'google-plus'|trans }}</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item custom-dropdown-item" href="/email" title="{{ 'send'|trans }}&nbsp;{{ 'email'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fas fa-envelope"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'email'|trans }}</span>
+                        </a>
+                        <a class="dropdown-item custom-dropdown-item" href="tel:5555555555" title="{{ 'calltome'|trans }}">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fas fa-phone"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'calltome'|trans }}</span>
+                        </a>
+                        <a id="information" class="dropdown-item custom-dropdown-item" href="javascript:void(0);" title="{{ 'info'|trans }}" data-toggle="modal" data-target="#modalInfo">
+                            <span class="col-xs-1 col-sm-1 col-md-1"><i class="fas fa-info-circle"></i></span>
+                            <span class="col-xs-11 col-sm-11 col-md-11">{{ 'info'|trans }}</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </div>
 </nav>
